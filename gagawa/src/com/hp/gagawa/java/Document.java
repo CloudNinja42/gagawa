@@ -40,11 +40,11 @@ public class Document{
 		html = new Html();
 		head = new Head();
 		body = new Body();
-		html.appendChild(head);
-		html.appendChild(body);
 	}
 	
 	public String write(){
+		html.appendChild(head);
+		html.appendChild(body);
 		StringBuffer b = new StringBuffer();
 		b.append(doctype.write());
 		b.append(html.write());
